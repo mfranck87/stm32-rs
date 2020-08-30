@@ -28,6 +28,21 @@ FLASH:
       WS3: [3, "3 wait states to read a word out of FLASH"]
       WS4: [4, "4 wait states to read a word out of FLASH"]
 
+  PDKEYR:
+    PDKEYR:
+      PDKEY1: [0x04142637,"Key1 to unlock RUN_PD bit in FLASH_ACR"]
+      PDKEY2: [0xFAFBFCFD,"Key2 to unlock RUN_PD bit in FLASH_ACR"]
+    
+  KEYR:
+    KEYR:
+      KEY1: [0x45670123, "Key1 to unlock prg/delete ops in FLASH_CR"]
+      KEY2: [0xCDEF89AB, "Key2 to unlock prg/delete ops in FLASH_CR"]
+    
+  OPTKEYR:
+    OPTKEYR:
+      KEY1: [0x08192A3B, "Key1 to unlock prg/delete ops in FLASH_CR"]
+      KEY2: [0x4C5D6E7F, "Key2 to unlock prg/delete ops in FLASH_CR"]
+
   SR:
     PEMPTY:
       _read:
