@@ -1,5 +1,15 @@
 _svd: ../svd/stm32l4x2.svd
 
+# SVD didn't labels FLASH_SR bit 17 as PEMPTY
+FLASH:
+  SR:
+    _add:
+      PEMPTY:
+        description: Program EMPTY
+        bitOffset: 17
+        bitWidth: 1
+        access: read-write
+        
 # SVD incorrectly labels APB1ENR1 bit 18 as USART1EN instead of USART3EN.
 # SVD incorrectly labels APB1ENR1 bit 26 as USBF instead of USBFSEN.
 # SVD incorrectly labels APB1ENR1 bit 14 as SPI1EN instead of SPI2EN.
