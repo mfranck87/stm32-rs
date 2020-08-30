@@ -1,0 +1,29 @@
+# Flash peripheral
+# Applicable to at least stm32l41x, stm32l42x, stm32l43x, stm32l44x, stm32l45x, stm32l46x
+
+FLASH:
+  ACR:
+    SLEEP_PD:
+      IdleMode: [0, "When the device is in Sleep mode, the FLASH is in Idle mode"]
+      PwrDownMode: [1, "When the device is in Sleep mode, the FLASH is in power-down mode"]
+    RUN_PD:
+      IdleMode: [0, "When the device is in Run mode, the FLASH is in Idle mode"]
+      PwrDownMode: [1, "When the device is in Run mode, the FLASH is in power-down mode"]
+    DCRST:
+      NotReset: [0, "Data cache is not reset"]
+      Reset: [1, "Data cache is reset"]
+    ICRST:
+      NotReset: [0, "Instruction cache is not reset"]
+      Reset: [1, "Instruction cache is reset"]
+    DCEN:
+      Disabled: [0, "Data cache is disabled"]
+      Enabled: [1, "Data cache is enabled"]
+    PRFTEN:
+      Disabled: [0, "Prefetch is disabled"]
+      Enabled: [1, "Prefetch is enabled"]
+    LATENCY:
+      WS0: [0, "0 wait states to read a word out of FLASH"]
+      WS1: [1, "1 wait state to read a word out of FLASH"]
+      WS2: [2, "2 wait states to read a word out of FLASH"]
+      WS3: [3, "3 wait states to read a word out of FLASH"]
+      WS4: [4, "4 wait states to read a word out of FLASH"]
