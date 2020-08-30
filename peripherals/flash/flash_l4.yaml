@@ -27,3 +27,80 @@ FLASH:
       WS2: [2, "2 wait states to read a word out of FLASH"]
       WS3: [3, "3 wait states to read a word out of FLASH"]
       WS4: [4, "4 wait states to read a word out of FLASH"]
+
+  SR:
+    PEMPTY:
+      _read:
+        NoError: [0, "No program empty error happend"]
+        Error: [1, "Programm empty happend at boot from FLASH"]
+      _write:
+        Toggle: [1, "Toggle the flag"]
+    BSY:
+      Inactive: [0, "No write/erase operation is in progress"]
+      Active: [1, "No write/erase operation is in progress"]
+    OPTVERR:
+      _read:
+        NoError: [0, "No error happened during the Option bytes loading"]
+        Error: [1, "One or more errors happened during the Option bytes loading"]
+      _write:
+        Clear: [1, "Clear the flag"]
+    RDERR:
+      _read:
+        NoError: [0, "No read protection error happened."]
+        Error: [1, "One read protection error happened"]
+      _write:
+        Clear: [1, "Clear the flag"]
+    FASTERR:
+      _read:
+        NoError: [0, "No Fast programming data miss error happened"]
+        Error: [1, "Fast programming data miss error happened"]
+      _write:
+        Clear: [1, "Clear the flag"]
+    MISERR:
+      _read:
+        NoError: [0, "No Fast programming data miss error happened"]
+        Error: [1, "Fast programming data miss error happened"]
+      _write:
+        Clear: [1, "Clear the flag"]
+    PGSERR:
+      _read:
+        NoError: [0, "No Programm sequence error happened"]
+        Error: [1, "One Programm sequence error happened"]
+      _write:
+        Clear: [1, "Clear the flag"]
+    SIZERR:
+      _read:
+        NoError: [0, "No size error happened"]
+        Error: [1, "One size error happened"]
+      _write:
+        Clear: [1, "Clear the flag"]
+    PGAERR:
+      _read:
+        NoError: [0, "No alignment error happened"]
+        Error: [1, "One alignment error happened"]
+      _write:
+        Clear: [1, "Clear the flag"]
+    WRPERR:
+      _read:
+        NoError: [0, "No protection error occurred"]
+        Error: [1, "One protection error occurred"]
+      _write:
+        Clear: [1, "Clear the flag"]
+    PROGERR:
+      _read:
+        NoError: [0, "No programming error occurred"]
+        Error: [1, "A programming error occurred"]
+      _write:
+        Clear: [1, "Clear the flag"]
+    OPERR:
+      _read:
+        NoError: [0, "No Operation error occurred"]
+        Error: [1, "An Operation error occurred"]
+      _write:
+        Clear: [1, "Clear the flag"]
+    EOP:
+      _read:
+        NoEvent: [0, "No EOP event occurred"]
+        Event: [1, "An EOP event occurred"]
+      _write:
+        Clear: [1, "Clear the flag"]
